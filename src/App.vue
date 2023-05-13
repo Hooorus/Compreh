@@ -1,55 +1,79 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+  <div id="app">
+    <v-app id="inspire">
+      <div id="system-bar">
+        <SystemBar></SystemBar>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+      <div id="header">
+        <Header></Header>
+      </div>
+      <div id="left-sidebar">
+        <LeftSidebar></LeftSidebar>
+      </div>
+      <div id="right-sidebar">
+        <RightSidebar></RightSidebar>
+      </div>
+      <div id="main-body">
+        <v-main>
+          <v-container class="py-8 px-6" fluid>
+            <router-view></router-view>
+          </v-container>
+        </v-main>
+      </div>
+      <div id="footer">
+        <Footer></Footer>
+      </div>
+      <div id="cover">
+        <Cover></Cover>
+      </div>
+    </v-app>
+  </div>
 </template>
 
 <script>
+import SystemBar from "@/components/SystemBar.vue";
+import Header from "@/components/Header.vue";
+import LeftSidebar from "@/components/LeftSidebar.vue";
+import Footer from "@/components/Footer.vue";
+import MessageLists from "@/components/MessageLists.vue";
+import Cover from "@/components/Cover.vue";
+import RightSidebar from "@/components/RightSidebar.vue";
 
 export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
-};
+  components: {RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
+  data: () => ({}),
+}
 </script>
+<style scoped>
+#app {
+
+}
+
+#app ::-webkit-scrollbar {
+  display: none;
+}
+
+#system-bar {
+
+}
+
+#header {
+
+}
+
+#left-sidebar {
+
+}
+
+#main-body {
+
+}
+
+#footer {
+}
+
+#cover {
+
+}
+
+</style>

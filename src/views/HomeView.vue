@@ -1,15 +1,18 @@
 <template>
-  <hello-world />
+  <div id="home">
+    <MessageLists></MessageLists>
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import MessageLists from "@/components/MessageLists.vue";
 
-  export default {
-    name: 'Home',
-
-    components: {
-      HelloWorld,
-    },
-  }
+export default {
+  name: "HomeView",
+  components: {MessageLists}
+}
 </script>
+
+<style scoped>
+
+</style>
