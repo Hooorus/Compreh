@@ -1,31 +1,42 @@
 <template>
   <div id="app">
     <v-app id="inspire">
-      <div id="system-bar">
+
+      <!--      <div id="system-bar">-->
+      <transition name="fade">
         <SystemBar></SystemBar>
-      </div>
-      <div id="header">
+      </transition>
+      <!--      </div>-->
+      <!--      <div id="header">-->
+      <transition name="fade">
         <Header></Header>
-      </div>
-      <div id="left-sidebar">
+      </transition>
+      <!--      </div>-->
+      <!--      <div id="left-sidebar">-->
+      <transition name="fade">
         <LeftSidebar></LeftSidebar>
-      </div>
-      <div id="right-sidebar">
-        <RightSidebar></RightSidebar>
-      </div>
-      <div id="main-body">
-        <v-main>
-          <v-container class="py-8 px-6" fluid>
+      </transition>
+      <!--      </div>-->
+      <!--      <div id="right-sidebar">-->
+      <transition name="fade">
+        <RightSidebar id="right-sidebar"></RightSidebar>
+      </transition>
+      <!--      </div>-->
+      <!--      <div id="main-body">-->
+      <v-main>
+        <v-container class="py-8 px-6" fluid>
+          <transition name="fade">
             <router-view></router-view>
-          </v-container>
-        </v-main>
-      </div>
+          </transition>
+        </v-container>
+      </v-main>
+      <!--      </div>-->
       <div id="cover">
         <Cover></Cover>
       </div>
-      <div id="footer">
-        <Footer></Footer>
-      </div>
+      <!--      <transition name="fade">-->
+      <!--        <Footer></Footer>-->
+      <!--      </transition>-->
     </v-app>
   </div>
 </template>
@@ -42,8 +53,10 @@ import RightSidebar from "@/components/RightSidebar.vue";
 export default {
   components: {RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
   data: () => ({}),
-  methods: {
-  }
+  created() {
+
+  },
+  methods: {}
 }
 </script>
 <style scoped>
@@ -67,6 +80,10 @@ export default {
 
 }
 
+.right-sidebar {
+  z-index: 950;
+}
+
 #main-body {
 
 }
@@ -80,5 +97,15 @@ export default {
   bottom: 2vh;
   right: 1vw;
   z-index: 999;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

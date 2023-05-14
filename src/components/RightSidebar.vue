@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <v-navigation-drawer v-model="drawer" permanent app light clipped floating
-                         right width="250" :src="userInfo.RightSidebarBackground">
+    <v-navigation-drawer v-model="drawer" permanent app clipped floating
+                         right width="250" color="primary">
       <v-divider></v-divider>
-      <v-list elevation="5" class="rounded-b-lg overflow-y-auto" shaped max-height="500">
-        <v-list-item v-for="item in functionLinks" :key="item" link :color="listItemIconColor">
+      <v-list elevation="1" class="rounded-b-lg overflow-y-auto" shaped max-height="450">
+        <v-list-item v-for="item in functionLinks" :key="item" link>
           <v-list-item-icon>
-            <v-icon :color="listItemIconColor">{{ item.avatar }}</v-icon>
+            <v-icon>{{ item.avatar }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
@@ -14,6 +14,11 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <v-card style="margin-top: 5px; padding: 5px; align-items: center" class="pa-2" elevation="0" color="transparent">
+        <v-btn large class="align-center" elevation="1" color="transparent">Day</v-btn>
+        <v-btn large class="align-center" elevation="1" color="transparent">Wee</v-btn>
+        <v-btn large class="align-center" elevation="1" color="transparent">Mon</v-btn>
+      </v-card>
     </v-navigation-drawer>
 
   </div>
@@ -31,7 +36,8 @@ export default {
       fullName: 'Yiming Liao',
       email: 'yonmineliao@gmail.com',
       avatar: 'https://cdn.vuetifyjs.com/images/john.jpg',
-      RightSidebarBackground: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg',
+      // RightSidebarBackground: 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg',
+      RightSidebarBackground: '#ffffff'
     },
     listItemIconColor: '#ffffff',
     listItemTextColor: '#ffffff',
@@ -41,11 +47,11 @@ export default {
       {id: 3, avatar: 'mdi-account', name: 'Bob Carl', email: 'zhangthird@gmail.com'},
       {id: 4, avatar: 'mdi-account', name: 'Immig Reyes', email: 'immigreyes@gmail.com'},
       {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
-      {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
-      {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
-      {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
-      {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
-      {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
+      {id: 5, avatar: 'mdi-account', name: 'Lambda', email: 'lambda@lambda.com'},
+      {id: 5, avatar: 'mdi-account', name: 'IT director', email: 'itdirector@outlook.com'},
+      {id: 5, avatar: 'mdi-account', name: 'Why', email: 'y@qq.com'},
+      {id: 5, avatar: 'mdi-account', name: 'Zaharaij', email: 'zaharaij@ucd.edu'},
+      {id: 5, avatar: 'mdi-account', name: 'Freak', email: 'freak@qq.com'},
     ],
   })
 }

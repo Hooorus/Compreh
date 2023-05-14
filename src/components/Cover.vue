@@ -14,7 +14,6 @@
 <script>
 export default {
   name: "Cover",
-  scrollTimer: null,
 
   data: () => ({
     backToTopIcon: 'mdi-chevron-double-up',
