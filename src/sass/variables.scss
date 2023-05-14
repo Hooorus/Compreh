@@ -1,0 +1,42 @@
+$border-radius-root: 6px;
+$rounded: (
+        0: 0,
+        'sm': $border-radius-root / 2,
+        null: $border-radius-root,
+        'lg': $border-radius-root * 2,
+        'xl': $border-radius-root * 6,
+        'pill': 9999px,
+        'circle': 50%
+);
+$border-radius-auto: 15px;
+//$activity-fonts: 'Harlow Solid';
+// src/sass/variables.scss
+
+// Globals
+//$body-fonts-family: 'Harlow Solid';
+//$fonts-size-root: 16px;
+
+// Variables must come before the import
+//$btn-letter-spacing: 0;
+//$btn-fonts-weight: 400;
+//$list-item-title-fonts-size: 0.929rem;
+//$list-item-dense-title-fonts-size: 0.929rem;
+//$list-item-dense-title-fonts-weight: initial;
+//$fab-icon-sizes: (
+//        'small': 20
+//);
+//$btn-sizes: (
+//        'default': 41,
+//        'large': 54
+//);
+//
+//$headings: (
+//        'h1': (
+//                'size': 3.3125rem,
+//                'line-height': 1.15em
+//        ),
+//        'h2': (
+//                'size': 2.25rem,
+//                'line-height': 1.5em
+//        )
+//);

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-footer id="v-footer" dark padless inset elevation="5" style="z-index: 999">
+    <v-footer id="v-footer" dark padless inset elevation="5">
       <v-card id="v-card" flat tile class="lighten-1 white--text text-center">
         <v-card-text class="pa-2">
           <v-btn v-for="icon in footerIcons" :key="icon" class="mx-4 white--text" icon>

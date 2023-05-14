@@ -20,11 +20,11 @@
           </v-container>
         </v-main>
       </div>
-      <div id="footer">
-        <Footer></Footer>
-      </div>
       <div id="cover">
         <Cover></Cover>
+      </div>
+      <div id="footer">
+        <Footer></Footer>
       </div>
     </v-app>
   </div>
@@ -42,6 +42,8 @@ import RightSidebar from "@/components/RightSidebar.vue";
 export default {
   components: {RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
   data: () => ({}),
+  methods: {
+  }
 }
 </script>
 <style scoped>
@@ -70,10 +72,13 @@ export default {
 }
 
 #footer {
+  z-index: 900
 }
 
 #cover {
-
+  position: fixed;
+  bottom: 2vh;
+  right: 1vw;
+  z-index: 999;
 }
-
 </style>

@@ -56,23 +56,20 @@ export default {
     },
     listItemIconColor: '#eeeeee',
     functionLinks: [
+      ['mdi-motion-play', 'Find What'],
       ['mdi-forum', 'Message'],
+      ['mdi-bell-ring', 'Notification'],
       ['mdi-account-multiple', 'Friends'],
       ['mdi-inbox-arrow-down', 'Archive'],
-      ['mdi-send', 'Send'],
-      ['mdi-delete', 'Trash'],
-      ['mdi-alert-octagon', 'Spam'],
-      ['mdi-monitor-dashboard', 'Dashboard'],
-      ['mdi-wallet', 'Wallet'],
       ['mdi-shopping', 'Marketplace'],
-      ['mdi-database', 'Database'],
-      ['mdi-cog', 'Setting'],
+      ['mdi-delete', 'Trash'],
       ['mdi-cog', 'Setting'],
     ],
   })
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+//@import '~vuetify/src/styles/styles.sass';
 
 </style>

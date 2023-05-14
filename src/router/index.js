@@ -4,36 +4,67 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+    //main page
     {
         path: '/',
         name: 'home',
         component: () => import('../views/HomeView.vue')
     },
+    //login & register page
     {
         path: '/login',
         name: 'login',
         component: () => import('../views/LoginPage.vue')
     },
+    //personal profile & setting
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('../views/ProfileView.vue')
+    },
+    //find what?
+    {
+        path: '/find_what',
+        name: 'find_what',
+        component: () => import('../views/FindWhatView.vue')
+    },
+    //message queues
+    {
+        path: '/message',
+        name: 'message',
+        component: () => import('../views/MessageView.vue')
+    },
+    //friends lists
+    {
+        path: '/friends',
+        name: 'friends',
+        component: () => import('../views/FriendsView')
+    },
+    //what you like & collect
+    {
+        path: '/archive',
+        name: 'archive',
+        component: () => import('../views/ArchiveView.vue')
+    },
+    //supermarket
+    {
+        path: '/marketplace',
+        name: 'marketplace',
+        component: () => import('../views/MarketplaceView.vue')
+    },
+    //supermarket
+    {
+        path: '/trash',
+        name: 'trash',
+        component: () => import('../views/TrashView.vue')
+    },
+    //monitor dashboard
     {
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('../views/DashboardView.vue')
     },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('../views/LoginPage.vue')
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('../views/LoginPage.vue')
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('../views/LoginPage.vue')
-    },
+
 ]
 
 const router = new VueRouter({
