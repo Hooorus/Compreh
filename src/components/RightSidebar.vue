@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-navigation-drawer v-model="drawer" permanent app clipped floating
-                         right width="250" color="primary">
+    <v-navigation-drawer v-model="drawer" permanent app clipped floating class="pl-0"
+                         right width="250" color="primary" style="box-shadow: -0.5px 0px 1px #b0b0b0">
       <v-divider></v-divider>
       <v-list elevation="1" class="rounded-b-lg overflow-y-auto" shaped max-height="450">
         <v-list-item v-for="item in functionLinks" :key="item" link>
@@ -45,7 +45,7 @@ export default {
       {id: 1, avatar: 'mdi-account', name: 'Yiming Liao', email: 'yonmineliao@gmail.com'},
       {id: 2, avatar: 'mdi-account', name: 'EricFly', email: 'ichenef@163.com'},
       {id: 3, avatar: 'mdi-account', name: 'Bob Carl', email: 'zhangthird@gmail.com'},
-      {id: 4, avatar: 'mdi-account', name: 'Immig Reyes', email: 'immigreyes@gmail.com'},
+      {id: 4, avatar: 'mdi-account', name: 'Immi Reyes', email: 'immigreyes@gmail.com'},
       {id: 5, avatar: 'mdi-account', name: 'Jack Lee', email: 'voidjacklee@163.com'},
       {id: 5, avatar: 'mdi-account', name: 'Lambda', email: 'lambda@lambda.com'},
       {id: 5, avatar: 'mdi-account', name: 'IT director', email: 'itdirector@outlook.com'},

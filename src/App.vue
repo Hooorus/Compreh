@@ -1,42 +1,7 @@
 <template>
   <div id="app">
-    <v-app id="inspire">
-
-      <!--      <div id="system-bar">-->
-      <transition name="fade">
-        <SystemBar></SystemBar>
-      </transition>
-      <!--      </div>-->
-      <!--      <div id="header">-->
-      <transition name="fade">
-        <Header></Header>
-      </transition>
-      <!--      </div>-->
-      <!--      <div id="left-sidebar">-->
-      <transition name="fade">
-        <LeftSidebar></LeftSidebar>
-      </transition>
-      <!--      </div>-->
-      <!--      <div id="right-sidebar">-->
-      <transition name="fade">
-        <RightSidebar id="right-sidebar"></RightSidebar>
-      </transition>
-      <!--      </div>-->
-      <!--      <div id="main-body">-->
-      <v-main>
-        <v-container class="py-8 px-6" fluid>
-          <transition name="fade">
-            <router-view></router-view>
-          </transition>
-        </v-container>
-      </v-main>
-      <!--      </div>-->
-      <div id="cover">
-        <Cover></Cover>
-      </div>
-      <!--      <transition name="fade">-->
-      <!--        <Footer></Footer>-->
-      <!--      </transition>-->
+    <v-app>
+      <router-view></router-view>
     </v-app>
   </div>
 </template>
@@ -49,13 +14,26 @@ import Footer from "@/components/Footer.vue";
 import MessageLists from "@/components/MessageLists.vue";
 import Cover from "@/components/Cover.vue";
 import RightSidebar from "@/components/RightSidebar.vue";
+import LoginPage from "@/views/LoginPage.vue";
 
 export default {
-  components: {RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
-  data: () => ({}),
+  components: {LoginPage, RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
+  data: () => ({
+    routerPathEQLogin: this.$route.params.path,
+    loginViewPath: "/login",
+    loginInfo: {
+      email: '12',
+      password: '12',
+    },
+    isLoggedIn: true,
+  }),
   created() {
 
   },
+  mounted() {
+
+  },
+  watch: {},
   methods: {}
 }
 </script>

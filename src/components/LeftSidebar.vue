@@ -13,20 +13,17 @@
           </v-btn>
         </v-list-item>
       </v-list>
-      <v-list-item link>
+      <v-list-item link :to="'/profile'">
         <v-list-item-content>
-          <v-list-item-title class="text-h6" v-if="miniSidebar===true">{{ userInfo.initialName }}</v-list-item-title>
-          <v-list-item-title class="text-h6" v-else-if="miniSidebar===false">{{
-              userInfo.fullName
-            }}
-          </v-list-item-title>
+          <v-list-item-title class="text-h6 white--text" v-if="miniSidebar===true">{{ userInfo.initialName }}</v-list-item-title>
+          <v-list-item-title class="text-h6 white--text" v-else-if="miniSidebar===false">{{ userInfo.fullName }}</v-list-item-title>
           <v-list-item-subtitle v-if="miniSidebar===true">{{ userInfo.initialEmail }}</v-list-item-subtitle>
           <v-list-item-subtitle v-else-if="miniSidebar===false">{{ userInfo.email }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item v-for="[icon, text] in functionLinks" :key="icon" link>
+        <v-list-item v-for="[icon, text, url] in functionLinks" :key="icon" link :to="url">
           <v-list-item-icon>
             <v-icon :color="listItemIconColor">{{ icon }}</v-icon>
           </v-list-item-icon>
@@ -56,14 +53,14 @@ export default {
     },
     listItemIconColor: '#eeeeee',
     functionLinks: [
-      ['mdi-motion-play', 'Find What'],
-      ['mdi-forum', 'Message'],
-      ['mdi-bell-ring', 'Notification'],
-      ['mdi-account-multiple', 'Friends'],
-      ['mdi-inbox-arrow-down', 'Archive'],
-      ['mdi-shopping', 'Marketplace'],
-      ['mdi-delete', 'Trash'],
-      ['mdi-cog', 'Setting'],
+      ['mdi-motion-play', 'Find What', '/findwhat'],
+      ['mdi-forum', 'Message', '/message'],
+      ['mdi-bell-ring', 'Notification', '/notification'],
+      ['mdi-account-multiple', 'Friends', '/friends'],
+      ['mdi-inbox-arrow-down', 'Archive', '/archive'],
+      ['mdi-shopping', 'Marketplace', '/marketplace'],
+      ['mdi-delete', 'Trash', '/trash'],
+      ['mdi-cog', 'Setting', '/setting'],
     ],
   })
 }

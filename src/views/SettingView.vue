@@ -35,15 +35,15 @@
 </template>
 
 <script>
-import LeftSidebar from "@/components/LeftSidebar.vue";
-import RightSidebar from "@/components/RightSidebar.vue";
 import Cover from "@/components/Cover.vue";
+import RightSidebar from "@/components/RightSidebar.vue";
+import LeftSidebar from "@/components/LeftSidebar.vue";
 import SystemBar from "@/components/SystemBar.vue";
 import Header from "@/components/Header.vue";
 
 export default {
-  name: "ArchiveView",
-  components: {Header, SystemBar, Cover, RightSidebar, LeftSidebar}
+  name: "SettingView",
+  components: {Header, SystemBar, LeftSidebar, RightSidebar, Cover}
 }
 </script>
 

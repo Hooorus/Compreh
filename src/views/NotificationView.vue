@@ -42,7 +42,7 @@ import SystemBar from "@/components/SystemBar.vue";
 import Header from "@/components/Header.vue";
 
 export default {
-  name: "ArchiveView",
+  name: "NotificationView",
   components: {Header, SystemBar, Cover, RightSidebar, LeftSidebar}
 }
 </script>

@@ -6,7 +6,8 @@ Vue.use(VueRouter)
 const routes = [
     //main page
     {
-        path: '/',
+        path: '/home',
+        alias: '/',
         name: 'home',
         component: () => import('../views/HomeView.vue')
     },
@@ -24,8 +25,8 @@ const routes = [
     },
     //find what?
     {
-        path: '/find_what',
-        name: 'find_what',
+        path: '/findwhat',
+        name: 'findwhat',
         component: () => import('../views/FindWhatView.vue')
     },
     //message queues
@@ -39,6 +40,12 @@ const routes = [
         path: '/friends',
         name: 'friends',
         component: () => import('../views/FriendsView')
+    },
+    //notice
+    {
+        path: '/notification',
+        name: 'notification',
+        component: () => import('../views/NotificationView.vue')
     },
     //what you like & collect
     {
@@ -60,6 +67,12 @@ const routes = [
     },
     //monitor dashboard
     {
+        path: '/setting',
+        name: 'setting',
+        component: () => import('../views/SettingView.vue')
+    },
+    //monitor dashboard
+    {
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('../views/DashboardView.vue')
@@ -70,5 +83,4 @@ const routes = [
 const router = new VueRouter({
     routes
 })
-
 export default router
