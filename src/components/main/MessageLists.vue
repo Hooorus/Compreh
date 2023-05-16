@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-      <v-alert
-          v-model="alert"
-          dismissible
-          color="cyan"
-          border="left"
-          elevation="2"
-          colored-border
-          icon="mdi-twitter"
-      >
-        You've got <strong>5</strong> new updates on your timeline!.
-      </v-alert>
+      <slot>
+        <v-alert
+            v-model="alert"
+            dismissible
+            color="cyan"
+            border="left"
+            elevation="2"
+            colored-border
+            icon="mdi-twitter"
+        >
+          No News!
+        </v-alert>
+      </slot>
       <v-row>
         <v-col v-for="card in cards" :key="card" cols="12">
           <v-card>

@@ -1,50 +1,16 @@
 <template>
-  <div id="app">
-        <v-app id="inspire">
-          <!--      <div id="system-bar">-->
-          <transition name="fade">
-            <SystemBar></SystemBar>
-          </transition>
-          <!--      </div>-->
-          <!--      <div id="header">-->
-          <transition name="fade">
-            <Header></Header>
-          </transition>
-          <!--      </div>-->
-          <!--      <div id="left-sidebar">-->
-          <transition name="fade">
-            <LeftSidebar></LeftSidebar>
-          </transition>
-          <!--      </div>-->
-          <!--      <div id="right-sidebar">-->
-          <transition name="fade">
-            <RightSidebar id="right-sidebar"></RightSidebar>
-          </transition>
-          <!--      </div>-->
-          <!--      <div id="main-body">-->
-          <v-main>
-            <v-container class="py-8 px-6" fluid>
-              <transition name="fade">
-                <router-view></router-view>
-              </transition>
-            </v-container>
-          </v-main>
-          <div id="cover">
-            <Cover></Cover>
-          </div>
-        </v-app>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import SystemBar from "@/components/SystemBar.vue";
-import Header from "@/components/Header.vue";
-import LeftSidebar from "@/components/LeftSidebar.vue";
-import Footer from "@/components/Footer.vue";
-import MessageLists from "@/components/MessageLists.vue";
-import Cover from "@/components/Cover.vue";
-import RightSidebar from "@/components/RightSidebar.vue";
-import LoginPage from "@/views/LoginPage.vue";
+import SystemBar from "@/components/systembar/SystemBar.vue";
+import Header from "@/components/navbar/Header.vue";
+import LeftSidebar from "@/components/leftsidebar/LeftSidebar.vue";
+import Footer from "@/components/footer/Footer.vue";
+import MessageLists from "@/components/main/MessageLists.vue";
+import Cover from "@/components/cover/Cover.vue";
+import RightSidebar from "@/components/rightsidebar/RightSidebar.vue";
+import LoginPage from "@/views/login/LoginPage.vue";
 
 export default {
   name: "HomeView",

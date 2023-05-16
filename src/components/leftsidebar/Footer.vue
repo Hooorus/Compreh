@@ -1,12 +1,13 @@
 <template>
-  <router-view></router-view>
+
 </template>
 
 <script>
 export default {
-  name: "DashboardView"
+  name: "Footer"
 }
 </script>
 
 <style scoped>
+
 </style>

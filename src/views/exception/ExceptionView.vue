@@ -1,12 +1,15 @@
 <template>
-  <router-view></router-view>
+  <div id="app">
+    404 error
+  </div>
 </template>
 
 <script>
 export default {
-  name: "DashboardView"
+  name: "ExceptionView"
 }
 </script>
 
 <style scoped>
+
 </style>

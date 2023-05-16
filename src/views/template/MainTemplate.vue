@@ -1,10 +1,28 @@
 <template>
   <div id="app">
-    <v-app>
-<!--      <router-link to="/main/home" style="z-index: 9999" class="blue"><h1>go to home page</h1></router-link>-->
-<!--      <router-link to="/main/profile/12" style="z-index: 9999" class="blue"><h1>go to profile page</h1></router-link>-->
-<!--      <router-link to="/login" style="z-index: 9999" class="blue"><h1>go to login page</h1></router-link>-->
-      <router-view></router-view>
+    <v-app id="inspire">
+      <transition name="fade">
+        <SystemBar></SystemBar>
+      </transition>
+      <transition name="fade">
+        <Header></Header>
+      </transition>
+      <transition name="fade">
+        <LeftSidebar></LeftSidebar>
+      </transition>
+      <transition name="fade">
+        <RightSidebar id="right-sidebar"></RightSidebar>
+      </transition>
+      <v-main>
+        <v-container class="py-8 px-6" fluid>
+          <transition name="fade">
+            <router-view></router-view>
+          </transition>
+        </v-container>
+      </v-main>
+      <div id="cover">
+        <Cover></Cover>
+      </div>
     </v-app>
   </div>
 </template>
@@ -18,13 +36,13 @@ import MessageLists from "@/components/main/MessageLists.vue";
 import Cover from "@/components/cover/Cover.vue";
 import RightSidebar from "@/components/rightsidebar/RightSidebar.vue";
 import LoginPage from "@/views/login/LoginPage.vue";
-import FindWhatView from "@/views/FindWhatView.vue";
 
 export default {
-  components: {FindWhatView, LoginPage, RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
+  name: "MainTemplate",
+  components: {LoginPage, RightSidebar, Cover, MessageLists, Footer, LeftSidebar, Header, SystemBar},
   data: () => ({
     routerPathEQLogin: this.$route.params.path,
-    loginViewPath: "/login",
+    loginViewPath: '/login',
     loginInfo: {
       email: '12',
       password: '12',
@@ -35,17 +53,10 @@ export default {
 
   },
   mounted() {
-    console.log(this.$route)
-  },
-  computed:{
-  },
-
-  watch: {
 
   },
-  methods: {
-
-  }
+  watch: {},
+  methods: {}
 }
 </script>
 <style scoped>
